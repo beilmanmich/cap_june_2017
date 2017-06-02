@@ -1,13 +1,13 @@
 # TDI Capstone - June 2017
 
 ## Background & Motivation
-TDI requires a Capstone project as a part of the 2 month bootcamp. My Capstone project sought to predict campaign funding success for [DonorsChoose.org](https://www.donorschoose.org/), a crowdfunding website that allows teachers to post campaigns (funding calls) for various educational purposes. Teachers submit details of their project along with a descriptive essay, this information populates a campaign webpage. Donors browse and select campaigns for donations, and if the project is successful in raising full funds, DonorsChoose purchases the materials and ships them to the teacher. The website is widely used - teachers at about two thirds of the public schools in the US have posted projects on the website, and it’s very effective - historically about 70% of campaigns receive full funding.
+As a final test of ability and growth, TDI requires a Capstone project upon completion of the 2 month bootcamp. This project sought to predict campaign funding success for [DonorsChoose.org](https://www.donorschoose.org/), a crowdfunding website that allows teachers to post campaigns (funding calls) for various educational purposes. Teachers submit details of their project along with a descriptive essay, this information populates a campaign webpage. Donors browse and select campaigns for donations, and if the project is successful in raising full funds, DonorsChoose purchases the materials and ships them to the teacher. The website is widely used - teachers at about two thirds of the public schools in the US have posted projects on the website, and it’s very effective - historically about 70% of campaigns receive full funding.
 
 This leaves the question - what about the 30% that don’t receive full funding? Using predictive algorithms, can we build a data driven application to allow teachers to “proof” their campaign before fully launching with DonorsChoose? Will this predictive model apply the proverbial “red pen” suggesting edits/improvements to a teacher’s campaign essay? Can we go even further and match an essay from a previously successful campaign?
 
-This project heavily utilized: _Python's sklearn, nltk, textblob, readcalc, pandas, flask_
+This project heavily utilized: _Python's sklearn, nltk, textblob, readcalc, pandas, flask_, and built off [prior data visualizations](https://github.com/beilmanmich/donors_dashboard).
 
-**A quick example of the app interface**
+**A quick example of the app interface, more details found on [YouTube]("https://github.com/beilmanmich/cap_june_2017/blob/master/gif/video.png")**
 
 <div style="text-align:center"><img src ="https://github.com/beilmanmich/cap_june_2017/blob/master/gif/out.gif" /></div>
 
