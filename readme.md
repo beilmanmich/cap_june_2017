@@ -8,7 +8,8 @@ This leaves the question - what about the 30% that don’t receive full funding?
 This project heavily utilized: _Python's sklearn, nltk, textblob, readcalc, pandas, flask_
 
 *A quick example of the app interface*
-![data viz](https://github.com/beilmanmich/cap_june_2017/blob/master/gif/out.gif)
+
+![alt-text](https://github.com/beilmanmich/cap_june_2017/blob/master/gif/out.gif "Example App")
 
 ![alt-text-1](https://github.com/beilmanmich/cap_june_2017/blob/master/gif/example.png "Example prediction") ![alt-text-2](https://github.com/beilmanmich/cap_june_2017/blob/master/gif/example_nlp.png "Example NLP - suggested essay & graded input essay")
 
