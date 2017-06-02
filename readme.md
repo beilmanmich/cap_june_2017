@@ -26,7 +26,7 @@ This Git contains the following folder structure:
 
 3, all other files (“format files”) indicate necessary files for Heroku (Flask) deployment (if deploying to Heroku a lean Anaconda build pack is recommended, examples in requirements). **A word of caution** this can be tricky/finicky to get right for deployment to a free [Heroku](https://devcenter.heroku.com/articles/getting-started-with-python#introduction) instance, as Heroku limits the final application footprint (slug) size to 300MB — [virtualenvs](http://python-guide-pt-br.readthedocs.io/en/latest/dev/virtualenvs/) allow for the development of a lean requirements.txt file and is strongly encouraged as best practice.
 
-Pickled model and sample psql model apps are included as previous versions, pickled models run well locally (and on an EC2 beanstalk), further memory increases can be realized by limiting data (more on this in data_clean).
+Pickled model and sample heroku psql model apps are included as previous versions, pickled models run well locally (and on an EC2 beanstalk), further memory increases can be realized by limiting data (more on this in data_clean).
 
 ### [_data_clean_ folder: Data Cleaning Code](https://github.com/beilmanmich/cap_june_2017/tree/master/data_clean)
 This folder represents a simple data cleaning pipeline for merging data, creating feature variables, etc. This repo was built for local deployment, when deployed to Heroku I chose to upgrade size and row limits of psql db, which allows high functioning for short-term demo purposes. 
