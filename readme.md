@@ -7,19 +7,20 @@ This leaves the question - what about the 30% that don’t receive full funding?
 
 This project heavily utilized: _Python's sklearn, nltk, textblob, readcalc, pandas, flask_
 
-![data viz](https://github.com/beilmanmich/cap_june_2017/blob/master/gif/out.gif):A quick example of the app interface
-----
+![data viz](https://github.com/beilmanmich/cap_june_2017/blob/master/gif/out.gif)
+A quick example of the app interface
+
 ## About this Git
 This Git contains the following folder structure:
 
-### app (app files):
-1. Final Heroku App
-2. Necessary Static files (html, css, js, etc.)
-3. Format files (requirements, Procfile, etc., dc_prediction.html, condo-requirements - used in conjunction with a Conda build pack)
+### [app (app files)](https://github.com/beilmanmich/cap_june_2017/tree/master/app)
+[1. Final Heroku App](https://github.com/beilmanmich/cap_june_2017/blob/master/app/app.py)
+[2. Necessary Static files (html, css, js, etc.)](https://github.com/beilmanmich/cap_june_2017/tree/master/app/static)
+3. Format files ([requirements.txt](https://github.com/beilmanmich/cap_june_2017/blob/master/app/requirements.txt), [Procfile](https://github.com/beilmanmich/cap_june_2017/blob/master/app/Procfile), [dc_prediction.html](https://github.com/beilmanmich/cap_june_2017/blob/master/app/dc_prediction.html), [conda-requirements.txt](https://github.com/beilmanmich/cap_june_2017/blob/master/app/conda-requirements.txt) - used in conjunction with a Conda build pack
 
 1 and 2 constitute all that is required to clone the prototype app for local development, upon download of this git users can simply run “app.py” on their local terminal, and launch the app via localhost:5000 (typically: http://127.0.0.1:5000/ OR http://0.0.0.0:5000/)
 
-3, all other files (“format files”) indicate necessary files for Heroku (Flask) deployment (if deploying to Heroku a lean Anaconda build pack is recommended, examples in requirements). **A word of caution** this can be tricky/finicky to get right for deployment to a free Heroku instance, as Heroku limits the final application footprint (slug) size to 300MB — localvenv (virtual environment) allows for the development of a lean requirements.txt file and is strongly encouraged as best practice.
+3, all other files (“format files”) indicate necessary files for Heroku (Flask) deployment (if deploying to Heroku a lean Anaconda build pack is recommended, examples in requirements). **A word of caution** this can be tricky/finicky to get right for deployment to a free [Heroku](https://devcenter.heroku.com/articles/getting-started-with-python#introduction) instance, as Heroku limits the final application footprint (slug) size to 300MB — [virtualenvs](http://python-guide-pt-br.readthedocs.io/en/latest/dev/virtualenvs/) allow for the development of a lean requirements.txt file and is strongly encouraged as best practice.
 
 Pickled model and sample psql model apps are included as previous versions, pickled models run well locally (and on an EC2 beanstalk), further memory increases can be realized by limiting data (more on this in data_clean).
 
