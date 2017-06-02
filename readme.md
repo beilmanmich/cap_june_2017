@@ -33,7 +33,7 @@ This folder represents a simple data cleaning pipeline for merging data, creatin
 
 **File label numbering corresponds to pipeline order:**
 
-[data_fetch.py](link) - may require edits (s3 links likely deprecated, DonorsChoose maintains documentation on it’s [OpenData page](https://research.donorschoose.org/t/download-opendata/33). All data licensed under creative commons, CC NY 3.0
+[data_fetch.py](link) - may require edits (s3 links likely deprecated, DonorsChoose maintains documentation on it’s [OpenData page](https://research.donorschoose.org/t/download-opendata/33). All data licensed under creative commons, **CC NY 3.0**.
 
 [1_clean_data.py](link)
 
