@@ -7,7 +7,7 @@ This leaves the question - what about the 30% that don’t receive full funding?
 
 This project heavily utilized: _Python's sklearn, nltk, textblob, readcalc, pandas, flask_, and built off [prior data visualizations](https://github.com/beilmanmich/donors_dashboard).
 
-**A quick example of the app interface, more details found on [YouTube]** [![IMAGE ALT TEXT HERE](https://github.com/beilmanmich/cap_june_2017/blob/master/gif/video.png)](https://www.youtube.com/watch?v=DtTbJT360Vk)
+**A quick example of the app interface, more details found on [YouTube](https://www.youtube.com/watch?v=DtTbJT360Vk)** [![IMAGE ALT TEXT HERE](https://github.com/beilmanmich/cap_june_2017/blob/master/gif/video.png)](https://www.youtube.com/watch?v=DtTbJT360Vk)
 
 <div style="text-align:center"><img src ="https://github.com/beilmanmich/cap_june_2017/blob/master/gif/out.gif" /></div>
 
