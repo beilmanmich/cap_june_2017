@@ -1,7 +1,7 @@
 # TDI Capstone - June 2017
 
 ## Background & Motivation
-TDI requires a Capstone project as a part of the 2 month bootcamp. My Capstone project sought to predict campaign funding success for DonorsChoose.org, a crowdfunding website that allows teachers to post campaigns (funding calls) for various educational purposes. Teachers submit details of their project along with a descriptive essay, this information populates a campaign webpage. Donors browse and select campaigns for donations, and if the project is successful in raising full funds, DonorsChoose purchases the materials and ships them to the teacher. The website is widely used - teachers at about two thirds of the public schools in the US have posted projects on the website, and it’s very effective - historically about 70% of campaigns receive full funding.
+TDI requires a Capstone project as a part of the 2 month bootcamp. My Capstone project sought to predict campaign funding success for [DonorsChoose.org](https://www.donorschoose.org/), a crowdfunding website that allows teachers to post campaigns (funding calls) for various educational purposes. Teachers submit details of their project along with a descriptive essay, this information populates a campaign webpage. Donors browse and select campaigns for donations, and if the project is successful in raising full funds, DonorsChoose purchases the materials and ships them to the teacher. The website is widely used - teachers at about two thirds of the public schools in the US have posted projects on the website, and it’s very effective - historically about 70% of campaigns receive full funding.
 
 This leaves the question - what about the 30% that don’t receive full funding? Using predictive algorithms, can we build a data driven application to allow teachers to “proof” their campaign before fully launching with DonorsChoose? Will this predictive model apply the proverbial “red pen” suggesting edits/improvements to a teacher’s campaign essay? Can we go even further and match an essay from a previously successful campaign?
 
@@ -17,7 +17,7 @@ This project heavily utilized: _Python's sklearn, nltk, textblob, readcalc, pand
 ## About this Git
 This Git contains the following folder structure:
 
-### [app (app files)](https://github.com/beilmanmich/cap_june_2017/tree/master/app)
+### [_app_ folder: app files for local and heroku deploy](https://github.com/beilmanmich/cap_june_2017/tree/master/app)
 [1. Final Heroku App](https://github.com/beilmanmich/cap_june_2017/blob/master/app/app.py)
 [2. Necessary Static files (html, css, js, etc.)](https://github.com/beilmanmich/cap_june_2017/tree/master/app/static)
 3. Format files ([requirements.txt](https://github.com/beilmanmich/cap_june_2017/blob/master/app/requirements.txt), [Procfile](https://github.com/beilmanmich/cap_june_2017/blob/master/app/Procfile), [dc_prediction.html](https://github.com/beilmanmich/cap_june_2017/blob/master/app/dc_prediction.html), [conda-requirements.txt](https://github.com/beilmanmich/cap_june_2017/blob/master/app/conda-requirements.txt) - used in conjunction with a Conda build pack
@@ -28,20 +28,24 @@ This Git contains the following folder structure:
 
 Pickled model and sample psql model apps are included as previous versions, pickled models run well locally (and on an EC2 beanstalk), further memory increases can be realized by limiting data (more on this in data_clean).
 
-### data_clean: Data Cleaning Code:
+### [_data_clean_ folder: Data Cleaning Code](https://github.com/beilmanmich/cap_june_2017/tree/master/data_clean)
 This folder represents a simple data cleaning pipeline for merging data, creating feature variables, etc. This repo was built for local deployment, when deployed to Heroku I chose to upgrade size and row limits of psql db, which allows high functioning for short-term demo purposes. 
 
 File label numbering corresponds to pipeline order:
 
 [data_fetch.py](link) - may require edits (s3 links likely deprecated, DonorsChoose maintains documentation on it’s [OpenData page](https://research.donorschoose.org/t/download-opendata/33). All data licensed under creative commons, CC NY 3.0
+
 [1_clean_data.py](link)
+
 [2_parse_recent.py](link) - when seeking to improve performance, reduce memory by parsing smaller date ranges
+
 [3_dummy_data_munge.py](link)
+
 [4_reduce_essays.py](link)
 
 These files can be run from the terminal, print statements allow the user to track job progress for pipeline tasks. **Run these files before model_scripts**, these files munge data files for analysis, and, more importantly, parse data into usable file sizes (and formats, notably pkl). Edit these based on local and hosted memory requirements.
 
-### model_scripts: Exploratory Data Analysis (EDA) Code:
+### [model_scripts: Exploratory Data Analysis (EDA) Code](https://github.com/beilmanmich/cap_june_2017/tree/master/model_scripts)
 
 In general, these scripts are a formal summary of several week’s of python notebook EDA (posts forthcoming), completed to inform model optimization. These models can be run directly in full from terminal, most codes contain print statements to compare cross-validated scores. Alternatively, one could copy/paste code segments into a ipython (jupyter) notebook for more “hands on” data exploratory analysis.
 
