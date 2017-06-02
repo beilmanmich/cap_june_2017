@@ -9,8 +9,6 @@ This project heavily utilized: _Python's sklearn, nltk, textblob, readcalc, pand
 
 *A quick example of the app interface*
 
-![alt-text](https://github.com/beilmanmich/cap_june_2017/blob/master/gif/out.gif "Example App")
-
 <div style="text-align:center"><img src ="https://github.com/beilmanmich/cap_june_2017/blob/master/gif/out.gif" /></div>
 
 <div style="text-align:center"><img src ="https://github.com/beilmanmich/cap_june_2017/blob/master/gif/example.png" /></div>
