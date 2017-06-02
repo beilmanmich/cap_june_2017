@@ -45,7 +45,7 @@ File label numbering corresponds to pipeline order:
 
 These files can be run from the terminal, print statements allow the user to track job progress for pipeline tasks. **Run these files before model_scripts**, these files munge data files for analysis, and, more importantly, parse data into usable file sizes (and formats, notably pkl). Edit these based on local and hosted memory requirements.
 
-### [model_scripts: Exploratory Data Analysis (EDA) Code](https://github.com/beilmanmich/cap_june_2017/tree/master/model_scripts)
+### [_model_scripts_ folder: Exploratory Data Analysis (EDA) Code](https://github.com/beilmanmich/cap_june_2017/tree/master/model_scripts)
 
 In general, these scripts are a formal summary of several week’s of python notebook EDA (posts forthcoming), completed to inform model optimization. These models can be run directly in full from terminal, most codes contain print statements to compare cross-validated scores. Alternatively, one could copy/paste code segments into a ipython (jupyter) notebook for more “hands on” data exploratory analysis.
 
