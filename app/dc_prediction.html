@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Will my donorschoose.org project get funded?</title>
+    <link rel="stylesheet" href="static/d3.slider.css" />
+    <style>
+     body {
+       font-family: Verdana,Arial,sans-serif;
+     }
+     h2 {
+       font-size: 1.2em;
+       margin: 40px 0 5px 0;
+       color: #808080
+     }
+     h1 {
+       font-size: 1em;
+       margin: 20px 0 2px 0;
+       color: black
+     }
+     #left_side {
+		float: left;
+
+     }
+     #right_side {
+		margin-left: 460px;
+
+     }
+	.table{
+		display: table;
+		width: 800px;
+		margin-left: auto;
+        margin-right: auto;
+	 }
+     .space {
+        margin-bottom: 0 px;
+     }
+     .wrapper {
+       width: 800px;
+       margin-left: auto;
+       margin-right: auto;
+       margin-bottom: 0px;
+     }
+     #bar_chart {
+       margin-bottom: 0px;
+     }
+     .bar {
+       fill: #f36f21;
+     }
+     span {
+       color: #41c4e4;
+     }
+     span2 {
+       color: #f36f21;
+     }
+     textarea { 
+       font-size: 18px; 
+       font-family: Verdana,Arial,sans-serif;
+     }
+     .mysubmitbutton {
+       font-size: 18px;
+       font-family: Verdana,Arial,sans-serif;
+
+     }
+    </style>
+  </head>
+  
+<body>
+
+<div class = "table">
+	<div id = "left_side">    
+	 <h2>State: <span id="state">AK</span></h2>
+      <select id="stateSelect">
+        <option value="8185,2065,3.96368038741">AK</option>
+		<option value="28333,8000,3.541625">AL</option>
+		<option value="24909,7869,3.16545939764">AR</option>
+		<option value="65953,12910,5.10867544539">AZ</option>
+		<option value="800185,157654,5.07557689624">CA</option>
+		<option value="48013,9132,5.25766535261">CO</option>
+		<option value="47062,9763,4.82044453549">CT</option>
+		<option value="38429,7814,4.91796775019">DC</option>
+		<option value="11997,2153,5.5722248026">DE</option>
+		<option value="207663,41090,5.05385738623">FL</option>
+		<option value="98427,22454,4.38349514563">GA</option>
+		<option value="16302,3769,4.32528522154">HI</option>
+		<option value="16242,4164,3.90057636888">IA</option>
+		<option value="13681,3061,4.46945442666">ID</option>
+		<option value="206034,48378,4.25883666129">IL</option>
+		<option value="87593,21452,4.0832090248">IN</option>
+		<option value="15311,3796,4.03345626976">KS</option>
+		<option value="24608,6023,4.08567159223">KY</option>
+		<option value="54087,15102,3.58144616607">LA</option>
+		<option value="77629,13341,5.81882917323">MA</option>
+		<option value="67169,12052,5.57326584799">MD</option>
+		<option value="21188,4467,4.7432281173">ME</option>
+		<option value="83680,16955,4.93541728104">MI</option>
+		<option value="33452,6163,5.4278760344">MN</option>
+		<option value="69536,15652,4.4426271403">MO</option>
+		<option value="28799,8677,3.31900426415">MS</option>
+		<option value="6764,1273,5.31343283582">MT</option>
+		<option value="175217,51352,3.41207742639">NC</option>
+		<option value="3006,642,4.68224299065">ND</option>
+		<option value="8056,2041,3.94708476237">NE</option>
+		<option value="10597,1985,5.33853904282">NH</option>
+		<option value="63941,13332,4.79605460546">NJ</option>
+		<option value="16229,3450,4.70405797101">NM</option>
+		<option value="36643,10738,3.41246042093">NV</option>
+		<option value="334846,85457,3.91829809144">NY</option>
+		<option value="54147,10957,4.94177238295">OH</option>
+		<option value="59916,19119,3.13384591244">OK</option>
+		<option value="44807,9167,4.88785862332">OR</option>
+		<option value="96404,19262,5.00488007476">PA</option>
+		<option value="12409,2712,4.5755899705">RI</option>
+		<option value="73372,23273,3.15266617969">SC</option>
+		<option value="6471,1389,4.65874730022">SD</option>
+		<option value="99405,17909,5.55056117036">TN</option>
+		<option value="194700,52912,3.67969458724">TX</option>
+		<option value="36404,11980,3.0387312187">UT</option>
+		<option value="68194,14485,4.70790472903">VA</option>
+		<option value="4214,772,5.4585492228">VT</option>
+		<option value="101334,15047,6.73449857114">WA</option>
+		<option value="43842,9285,4.72180936995">WI</option>
+		<option value="12952,3116,4.15661103979">WV</option>
+		<option value="2588,553,4.67992766727">WY</option>
+      </select>
+      
+        <h2>School metro area: <span id="metro">Urban</span></h2>
+      <select id="metroSelect">
+        <option value="0,0,1">Urban</option>
+      	<option value="0,1,0">Suburban</option>
+      	<option value="1,0,0">Rural</option>
+      </select>
+
+
+    
+      <h2>School income level: <span id="poverty">Very low income</span></h2>
+      <select id="povertySelect">
+      	<option value="0,1,0,0">Very low income</option>
+      	<option value="1,0,0,0">Low income</option>
+      	<option value="0,0,0,1">Moderate income</option>
+      	<option value="0,0,1,0">High income</option>
+	  </select>
+
+
+
+	</div>
+    	 
+    <div id = "right_side">    
+       <h2>Grade Level: <span id="grade">Grades Pre K-2</span></h2>
+      <select id="gradeSelect">
+        <option value="0,0,0,1">Grades Pre K-2</option>
+      	<option value="1,0,0,0">Grades 3-5</option>
+      	<option value="0,1,0,0">Grades 6-8</option>
+      	<option value="0,0,1,0">Grades 9-12</option>
+      </select>
+         
+    <h2>Subject: <span id="subject">Applied Sciences</span></h2>
+      <select id="subjectSelect">
+      	<option value="1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">Applied Sciences</option>
+      	<option value="0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">Character Education</option>
+      	<option value="0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">Civics & Government</option>
+      	<option value="0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">College & Career Prep</option>
+      	<option value="0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">Community Service</option>
+      	<option value="0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">ESL</option>
+      	<option value="0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">Early Development</option>
+      	<option value="0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">Economics</option>
+      	<option value="0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">Environmental Science</option>
+      	<option value="0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">Extracurricular</option>
+      	<option value="0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">Financial Literacy</option>
+      	<option value="0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">Foreign Languages</option>
+      	<option value="0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">Gym & Fitness</option>
+      	<option value="0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0">Health & Life Science</option>
+      	<option value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0">Health & Wellness</option>
+      	<option value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0">History & Geography</option>
+      	<option value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0">Literacy</option>
+      	<option value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0">Literature & Writing</option>
+      	<option value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0">Mathematics</option>
+      	<option value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0">Music</option>
+      	<option value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0">Nutrition</option>
+      	<option value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0">Other</option>
+      	<option value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0">Parent Involvement</option>
+      	<option value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0">Performing Arts</option>
+      	<option value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0">Social Sciences</option>
+      	<option value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0">Special Needs</option>
+      	<option value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0">Team Sports</option>
+      	<option value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1">Visual Arts</option>
+	  </select>
+	  
+      <h2>Resource Type: <span id="resource">Books</span></h2>
+      <select id="resourceSelect">
+        <option value="1,0,0,0,0,0">Books</option>
+      	<option value="0,0,1,0,0,0">Supplies</option>
+      	<option value="0,0,0,1,0,0">Technology</option>
+      	<option value="0,0,0,0,1,0">Trips</option>
+      	<option value="0,0,0,0,0,1">Visitors</option>
+      	<option value="0,1,0,0,0,0">Other</option>
+      </select>
+      
+    </div>
+ </div>  
+ 
+    <div id="sliders" class="wrapper">
+      <h2 class="feature">Month: <span id="month">1</span></h2>
+      <div id="month_slider"></div>
+    
+      <h2 class="feature">Number of previous projects by school: <span id="school">0</span></h2>
+      <div id="school_slider"></div>
+      
+      <h2 class="feature">Number of previous projects by teacher: <span id="teacher">0</span></h2>
+      <div id="teacher_slider"></div>
+      
+      <h2 class="feature">Number of students reached: <span id="students">95</span></h2>
+      <div id="students_slider"></div>
+      
+      <h2 class="feature">Total price of project: <span id="price">500</span></h2>
+      <div id="price_slider"></div>
+
+	</div>
+ 
+
+    <div id="chart_area" class="wrapper">
+      <h2>Probability your project will get funded:</h2>
+      <div id="bar_chart">
+      </div>
+    </div>
+    
+    <div id = "text" class = "wrapper">
+		<h2> Want to improve your chances of getting funded? A great essay can help.</h>
+		<h2> Here's what a teacher with a project similar to yours wrote to get funded:</h>
+		<h1 id="neighbor_text">(blank)</h1>
+		<h2> Positivity score: <span id="neighbor_positivity">(blank)</span></h2>
+		<h2> Readability score: <span id="neighbor_readability">(blank)</span></h2>
+
+	</div>
+
+<div id="textbox" class="wrapper">	
+	
+	<h2>See how your essay compares:</h2>
+	<div><textarea type="text" id="input_a" name="user_essay" style="width: 800px;height: 300px"></textarea></div>
+	<div><button class="mysubmitbutton" id="submitEssay">Submit</button></div>
+<input class="mysubmitbutton" type="submit" name="a" value="Sample" onclick="setInput(this); return false;"> 
+	
+	<h2> Positivity score: <span id="essay_positivity">(blank)</span></h2>
+	<h2> Readability score: <span id="essay_readability">(blank)</span></h2>
+	<h2><span2 id = "response"> (blank)</span2></h2>
+
+</div>
+
+    <!-- Import the libraries: jQuery, d3, d3.slider -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="static/d3.slider.js"></script>
+
+    <script>
+    
+     <!-- GLOBAL VARIABLES -->
+     var current_month = 1
+     var current_price = 500;
+     var current_students = 95;
+     var current_risk = 0.0;
+     var current_school = 0;
+     var current_teacher = 0;
+     var current_poverty = $("#povertySelect").val();
+     var current_grade = $("#gradeSelect").val();
+     var current_metro = $("#metroSelect").val();
+     var current_resource = $("#resourceSelect").val();
+     var current_subject = $("#subjectSelect").val();
+     var current_price_per_student = current_price / current_students;
+     var current_state = $("#stateSelect").val();
+     
+     var chart = d3.select("#bar_chart")
+                   .append("svg:svg")
+                   .attr("width", 800)
+                   .attr("height", 100);
+     var chance_scale = d3.scale.linear()
+                                .domain([0, 100])
+                                .range([0, 800]);
+     var bar = chart.append("g")
+                    .attr("class", "bar")
+	 bar.append("svg:rect")
+          .attr("id", "chancebar")
+          .attr("class", "bar")
+          .attr("width", chance_scale(current_risk))
+          .attr("height", 50);
+     bar.append("text")
+        .attr("id", "percent_text")
+        .attr("dy", ".75em")
+        .attr("y", 15)
+        .attr("x", chance_scale(current_risk-5))
+        .attr("text-anchor", "middle")
+        .attr("fill", "white")
+        .attr("font-size", 20)
+        .text( current_risk.toFixed(1) + "%");
+        
+     <!-- END GLOBAL VARIABLES -->
+     
+     var Text = 'This is the best essay ever.  My project is definitely going to get funded.';
+function setInput(button) {
+   var buttonVal = button.name,
+   textbox = document.getElementById('input_' + buttonVal);
+   textbox.value = Text ;
+}
+     
+     $( document ).ready(function() {
+		$("#submitEssay").click(function() {
+			var essay = $("#input_a").val();
+		
+			$.ajax({
+				 type: "POST",
+				 contentType: "application/json; charset=utf-8",
+				 url: "/grade_essay",
+				 dataType: "json",
+				 async: true,
+				 data: "{\"essay\": \"" + essay + "\", \"example\": ["+current_school+", "+current_teacher+", "+current_month+", "+current_price+","+current_students+","+current_price_per_student+", "+current_state+", "+current_subject+", "+current_poverty+", "+current_grade+", "+current_metro+", "+current_resource+"]}",
+				 success: function (data) {
+                 	$("#essay_readability").html(data.readability);
+                 	 $("#essay_positivity").html(data.polarity);
+                 	 var neighbor_polarity = $("#neighbor_positivity").html();
+                 	 if (parseFloat(data.polarity) > parseFloat(neighbor_polarity)) {
+                 	 var good_response = "You've improved your chances of getting funded! Good luck!";
+                 	  $("#response").html(good_response);
+                 	  }
+                 	  else {
+                 	  var bad_response = "Good job. Can you write something even better?";
+                 	   $("#response").html(bad_response); 
+                 	   }
+				 },
+				error: function (result) {alert('Please leave out line breaks') }
+			   })
+		});
+	});
+    
+         
+	<!-- FUNCTION TO GET CHANCE FROM YOUR PREDICTOR WITH AJAX AND CHANGE BAR  HEIGHT -->
+	function getAndDrawChance(school, teacher, month, price, students, price_per_student, state, subject, poverty, grade, metro, resource) {
+		var students = Math.sqrt(students);
+       var price = current_price * 1.15;
+	   price = Math.log(price);
+       
+       $.ajax({
+         type: "POST",
+         contentType: "application/json; charset=utf-8",
+         url: "/score",
+         dataType: "json",
+         async: true,
+         data: "{\"example\": ["+school+", "+teacher+", "+month+", "+price+","+students+","+price_per_student+", "+current_state+", "+subject+", "+poverty+", "+grade+", "+metro+", "+resource+"]}",
+         success: function (data) {
+          $("#neighbor_text").html(data.project_text);
+          $("#neighbor_readability").html(data.user_readability);
+          $("#neighbor_positivity").html(data.neighbor_polarity);
+
+           var chance = 100 * data["score"];
+           d3.select("#chancebar")
+             .attr("width", chance_scale(chance));
+           d3.select("#percent_text")
+             .attr("x", chance_scale(chance-5))
+             .text(chance.toFixed(1) + "%");
+         },
+        error: function (result) { }
+       })
+     }
+    
+    $("#stateSelect")
+     .change(function() {
+       current_state = $(this).val();
+       var state_name = $("#stateSelect option:selected").text()
+       document.getElementById("state").textContent=state_name;
+       getAndDrawChance(current_school, current_teacher, current_month, current_price, current_students, current_price_per_student, current_state, current_subject, current_poverty, current_grade, current_metro, current_resource);
+     }); 
+    
+    $("#povertySelect")
+     .change(function() {
+       current_poverty = $(this).val();
+       var poverty_name = $("#povertySelect option:selected").text()
+       document.getElementById("poverty").textContent=poverty_name;
+       getAndDrawChance(current_school, current_teacher, current_month, current_price, current_students, current_price_per_student, current_state, current_subject, current_poverty, current_grade, current_metro, current_resource);
+     }); 
+    
+    $("#gradeSelect")
+     .change(function() {
+       current_grade = $(this).val();
+       var grade_name = $("#gradeSelect option:selected").text()
+       document.getElementById("grade").textContent=grade_name;
+       getAndDrawChance(current_school, current_teacher, current_month, current_price, current_students, current_price_per_student, current_state, current_subject, current_poverty, current_grade, current_metro, current_resource);
+     }); 
+    
+    $("#metroSelect")
+     .change(function() {
+       current_metro = $(this).val();
+       var metro_name = $("#metroSelect option:selected").text()
+       document.getElementById("metro").textContent=metro_name;
+       getAndDrawChance(current_school, current_teacher, current_month, current_price, current_students, current_price_per_student, current_state, current_subject, current_poverty, current_grade, current_metro, current_resource);
+     }); 
+    
+    $("#resourceSelect")
+     .change(function() {
+       current_resource = $(this).val();
+       var resource_name = $("#resourceSelect option:selected").text()
+       document.getElementById("resource").textContent=resource_name;
+       getAndDrawChance(current_school, current_teacher, current_month, current_price, current_students, current_price_per_student, current_state, current_subject, current_poverty, current_grade, current_metro, current_resource);
+     }); 
+    
+    
+     $("#subjectSelect")
+     .change(function() {
+       current_subject = $(this).val();
+       var subject_name = $("#subjectSelect option:selected").text();
+       document.getElementById("subject").textContent=subject_name;
+       getAndDrawChance(current_school, current_teacher, current_month, current_price, current_students, current_price_per_student, current_state, current_subject, current_poverty, current_grade, current_metro, current_resource);
+     });
+       
+     <!-- SLIDERS -->
+     d3.select('#school_slider')
+       .call(
+         d3.slider()
+           .value(current_school)
+           .min(0)
+           .max(100)
+           .step(1)
+           .axis(true)
+           .on("slide", function(evt,value) {
+             	d3.select('#school').text(value);
+             	current_school = value;
+             	current_price_per_student = current_price / current_students;
+       getAndDrawChance(current_school, current_teacher, current_month, current_price, current_students, current_price_per_student, current_state, current_subject, current_poverty, current_grade, current_metro, current_resource);
+           })
+       )
+       
+       d3.select('#teacher_slider')
+       .call(
+         d3.slider()
+           .value(current_teacher)
+           .min(0)
+           .max(100)
+           .step(1)
+           .axis(true)
+           .on("slide", function(evt,value) {
+             	d3.select('#teacher').text(value);
+             	current_teacher = value;
+             	current_price_per_student = current_price / current_students;
+       getAndDrawChance(current_school, current_teacher, current_month, current_price, current_students, current_price_per_student, current_state, current_subject, current_poverty, current_grade, current_metro, current_resource);
+           })
+       )
+       
+     d3.select('#month_slider')
+       .call(
+         d3.slider()
+           .value(current_month)
+           .min(1)
+           .max(12)
+           .step(1)
+           .axis(true)
+           .on("slide", function(evt,value) {
+        		d3.select('#month').text(value);
+             	current_month = value;
+             	current_price_per_student = current_price / current_students;
+       getAndDrawChance(current_school, current_teacher, current_month, current_price, current_students, current_price_per_student, current_state, current_subject, current_poverty, current_grade, current_metro, current_resource);
+       		})
+       )
+     
+     d3.select('#price_slider')
+       .call(
+         d3.slider()
+           .value(current_price)
+           .min(1)
+           .max(2000)
+           .step(1)
+           .axis(true)
+           .on("slide", function(evt,value) {
+            	d3.select('#price').text(value);
+            	current_price = value;
+            	current_price_per_student = current_price / current_students;
+       getAndDrawChance(current_school, current_teacher, current_month, current_price, current_students, current_price_per_student, current_state, current_subject, current_poverty, current_grade, current_metro, current_resource);
+           })
+       )
+     
+     d3.select('#students_slider')
+       .call(
+         d3.slider()
+           .value(current_students)
+           .min(1)
+           .max(2000)
+           .step(1)
+           .axis(true)
+           .on("slide", function(evt,value) {
+             	d3.select('#students').text(value);
+             	current_students = value;
+             	current_price_per_student = current_price / current_students;
+       getAndDrawChance(current_school, current_teacher, current_month, current_price, current_students, current_price_per_student, current_state, current_subject, current_poverty, current_grade, current_metro, current_resource);
+           })
+       )
+       
+    </script>
+  </body>
+</html>
