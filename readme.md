@@ -11,7 +11,10 @@ This project heavily utilized: _Python's sklearn, nltk, textblob, readcalc, pand
 
 ![alt-text](https://github.com/beilmanmich/cap_june_2017/blob/master/gif/out.gif "Example App")
 
-![alt-text-1](https://github.com/beilmanmich/cap_june_2017/blob/master/gif/example.png "Example prediction") ![alt-text-2](https://github.com/beilmanmich/cap_june_2017/blob/master/gif/example_nlp.png "Example NLP - suggested essay & graded input essay")
+<div style="text-align:center"><img src ="https://github.com/beilmanmich/cap_june_2017/blob/master/gif/out.gif" /></div>
+
+<div style="text-align:center"><img src ="https://github.com/beilmanmich/cap_june_2017/blob/master/gif/example.png" /></div>
+<div style="text-align:center"><img src ="https://github.com/beilmanmich/cap_june_2017/blob/master/gif/example_nlp.png" /></div>
 
 ## About this Git
 This Git contains the following folder structure:
