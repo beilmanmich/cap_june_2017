@@ -23,7 +23,7 @@ This Git contains the following folder structure:
 
 [2. Necessary Static files (html, css, js, etc.)](https://github.com/beilmanmich/cap_june_2017/tree/master/app/static)
 
-3. Format files - ([requirements.txt](https://github.com/beilmanmich/cap_june_2017/blob/master/app/requirements.txt), [Procfile](https://github.com/beilmanmich/cap_june_2017/blob/master/app/Procfile), [dc_prediction.html](https://github.com/beilmanmich/cap_june_2017/blob/master/app/dc_prediction.html), [conda-requirements.txt](https://github.com/beilmanmich/cap_june_2017/blob/master/app/conda-requirements.txt) - used in conjunction with a Conda build pack
+[3. Format files](https://github.com/beilmanmich/cap_june_2017/tree/master/app) - [requirements.txt](https://github.com/beilmanmich/cap_june_2017/blob/master/app/requirements.txt), [Procfile](https://github.com/beilmanmich/cap_june_2017/blob/master/app/Procfile), [dc_prediction.html](https://github.com/beilmanmich/cap_june_2017/blob/master/app/dc_prediction.html), [conda-requirements.txt](https://github.com/beilmanmich/cap_june_2017/blob/master/app/conda-requirements.txt) - used in conjunction with a Conda build pack
 
 1 and 2 constitute all that is required to clone the prototype app for local development, upon download of this git users can simply run “app.py” on their local terminal, and launch the app via `localhost:5000`.
 
