@@ -36,15 +36,15 @@ This folder represents a simple data cleaning pipeline for merging data, creatin
 
 **File label numbering corresponds to pipeline order:**
 
-[data_fetch.py](link) - may require edits (s3 links likely deprecated, DonorsChoose maintains documentation on it’s [OpenData page](https://research.donorschoose.org/t/download-opendata/33). All data licensed under creative commons, **CC NY 3.0**.
+[data_fetch.py](https://github.com/beilmanmich/cap_june_2017/blob/master/data_clean/data_fetch.py) - may require edits (s3 links likely deprecated, DonorsChoose maintains documentation on it’s [OpenData page](https://research.donorschoose.org/t/download-opendata/33). All data licensed under creative commons, **CC NY 3.0**.
 
-[1_clean_data.py](link)
+[1_clean_data.py](https://github.com/beilmanmich/cap_june_2017/blob/master/data_clean/1_clean_data.py)
 
-[2_parse_recent.py](link) - when seeking to improve performance, reduce memory by parsing smaller date ranges
+[2_parse_recent.py](https://github.com/beilmanmich/cap_june_2017/blob/master/data_clean/2_parse_recent.py) - when seeking to improve performance, reduce memory by parsing smaller date ranges
 
-[3_dummy_data_munge.py](link)
+[3_dummy_data_munge.py](https://github.com/beilmanmich/cap_june_2017/blob/master/data_clean/3_dummy_data_munge.py)
 
-[4_reduce_essays.py](link)
+[4_reduce_essays.py](https://github.com/beilmanmich/cap_june_2017/blob/master/data_clean/4_reduce_essays.py)
 
 These files can be run from the terminal, print statements allow the user to track job progress for pipeline tasks. **Run these files before model_scripts**, these files munge data files for analysis, and, more importantly, parse data into usable file sizes (and formats, notably pkl). Edit these based on local and hosted memory requirements.
 
